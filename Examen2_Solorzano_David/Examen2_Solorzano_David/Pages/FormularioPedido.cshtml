@@ -1,0 +1,105 @@
+﻿@page
+@model Examen2_Solorzano_David.Pages.FormularioPedidoModel
+@{
+    ViewData["Title"] = "FormularioPedido";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/form.css" />
+    
+</head>
+<h2>FormularioPedido</h2>
+
+<div class="container">
+    <form action="post">
+        <h1>Arme su pizza</h1>
+        <br>
+
+        <p>Arme su pizza con sus opciones e ingredientes preferibles</p>
+        <hr>
+        <div>
+            <h4>Estructura<span class="required">*</span></h4>
+            <br>
+            <div class="row">
+                <div class="col-sm-6"><h4>Masa</h4></div>
+                <div class="col-sm-6"><h4>Tamaño</h4></div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="col-sm-6">
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            Original
+                        </label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">
+                            Crunchy
+                        </label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                        <label class="form-check-label" for="gridRadios3">
+                            Sarten
+                        </label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                        <label class="form-check-label" for="gridRadios3">
+                            Orilla de Queso
+                        </label>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadio" id="gridRadio3" value="option3">
+                        <label class="form-check-label" for="gridRadio3">
+                            Pequeña
+                        </label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadio" id="gridRadio1" value="option1" checked>
+                        <label class="form-check-label" for="gridRadio1">
+                            Mediana
+                        </label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadio" id="gridRadio2" value="option2">
+                        <label class="form-check-label" for="gridRadio2">
+                            Grande
+                        </label>
+                    </div>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadio" id="gridRadio3" value="option3">
+                        <label class="form-check-label" for="gridRadio3">
+                            Extra Grande
+                        </label>
+                    </div>
+                    <br>
+                </div>
+
+            </div>
+            <hr>
+            <div class="comments-block">
+                <h4 class="comments">Comments<small>Please let us know what could be done to improve this course</small></h4>
+                <div class="answer">
+                    <textarea rows="5"></textarea>
+                </div>
+            </div>
+
+            <div class="btn-block">
+                <button type="submit" href="/">Send</button>
+            </div>
+    </form>
+</div>
+
