@@ -9,11 +9,30 @@ namespace Examen2_Solorzano_David.Clases
     {
         private List<string> ingredientes;
         private List<int> precios;
-        private string[] Pizza_base; //Salsa, Queso, Masa y Tamano
+        private int precioTotal;
+        private string salsa;
+        private string tamano;
+        private string masa;
+        private string queso;
 
         public Pizza()
         {
-            this.Pizza_base = new string[4];
+            
+        }
+
+        public List<string>getIngredientes()
+        {
+            return this.ingredientes;
+        }
+
+        public List<int> getPrecios()
+        {
+            return this.precios;
+        }
+
+        public int getPrecioTotal()
+        {
+            return this.precioTotal;
         }
 
         public class Builder
@@ -25,18 +44,36 @@ namespace Examen2_Solorzano_David.Clases
                 this.pisa = new Pizza();
             }
 
-            public Builder agregarBase(string [] pizza_bases)
+            public Builder agregarSalsa(string sauce)
             {
-                this.pisa.Pizza_base[0] = pizza_bases[0]; //Masa
-                this.pisa.Pizza_base[1] = pizza_bases[1]; //Tamano
-                this.pisa.Pizza_base[2] = pizza_bases[2]; //Salsa
-                this.pisa.Pizza_base[3] = pizza_bases[3]; //Queso
+                pisa.salsa = sauce;
 
                 return this;
             }
 
-            public Builder agregarIngredientes(List<string> ingredientes)
+            public Builder agregarQueso(string quesos)
             {
+                pisa.queso = quesos;
+
+                return this;
+            }
+
+            public Builder agregarMasa(string sauce)
+            {
+                pisa.masa = sauce;
+
+                return this;
+            }
+
+            public Builder agregarTamano(string tamanio)
+            {
+                pisa.tamano = tamanio;
+                return this;
+            }
+
+            public Builder agregarIngredientes(string ingrediente)
+            {
+                pisa.ingredientes.Add(ingrediente);
                 return this;
             }
 
