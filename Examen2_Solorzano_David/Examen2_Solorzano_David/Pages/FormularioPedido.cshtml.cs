@@ -53,7 +53,7 @@ namespace Examen2_Solorzano_David.Pages
             controller.guardarDatos(salsa, masa, queso, tamanio, ingredientes);
             precioIngredientes = controller.getIngredientesPrecio();
             precioTotal = 500 + 1000 + 1000 + precioIngredientes;
-            return RedirectToPage("FormularioPedido");
+            return RedirectToPage("Factura");
         }
     }
 }
