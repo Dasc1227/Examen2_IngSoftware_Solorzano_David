@@ -11,7 +11,7 @@
 <h2>Formulario Pedido</h2>
 
 <div class="container">
-    <form action="post">
+    <form method="post">
         <h1>Arme su pizza</h1>
         <br>
 
@@ -32,28 +32,28 @@
                 <div class="col-sm-6">
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="masa" id="masa1" value="original" checked>
                         <label class="form-check-label" for="gridRadios1">
                             Original
                         </label>
                     </div>
                     <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <input class="form-check-input" type="radio" name="masa" id="masa2" value="crunchy">
                         <label class="form-check-label" for="gridRadios2">
                             Crunchy
                         </label>
                     </div>
                     <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                        <input class="form-check-input" type="radio" name="masa" id="masa3" value="sarten">
                         <label class="form-check-label" for="gridRadios3">
                             Sarten
                         </label>
                     </div>
                     <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                        <input class="form-check-input" type="radio" name="masa" id="masa3" value="queso">
                         <label class="form-check-label" for="gridRadios3">
                             Orilla de Queso
                         </label>
@@ -61,28 +61,28 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadio" id="gridRadio3" value="option3">
+                        <input class="form-check-input" type="radio" name="tamano" id="tamano1" value="peque">
                         <label class="form-check-label" for="gridRadio3">
                             Pequeña
                         </label>
                     </div>
                     <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadio" id="gridRadio1" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="tamano" id="tamano2" value="media" checked>
                         <label class="form-check-label" for="gridRadio1">
                             Mediana
                         </label>
                     </div>
                     <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadio" id="gridRadio2" value="option2">
+                        <input class="form-check-input" type="radio" name="tamano" id="tamano3" value="grande">
                         <label class="form-check-label" for="gridRadio2">
                             Grande
                         </label>
                     </div>
                     <br>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gridRadio" id="gridRadio3" value="option3">
+                        <input class="form-check-input" type="radio" name="tamano" id="tamano4" value="extra">
                         <label class="form-check-label" for="gridRadio3">
                             Extra Grande
                         </label>
@@ -107,21 +107,21 @@
                     <div class="col-sm-6">
 
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="salsa" id="grid1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="salsa" id="grid1" value="izq" checked>
                             <label class="form-check-label" for="gridRadios1">
                                 Mitad Izquierda
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="salsa" id="grid2" value="option2">
+                            <input class="form-check-input" type="radio" name="salsa" id="grid2" value="todo">
                             <label class="form-check-label" for="gridRadios2">
                                 Todo
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="salsa" id="grid3" value="option3">
+                            <input class="form-check-input" type="radio" name="salsa" id="grid3" value="dere">
                             <label class="form-check-label" for="gridRadios3">
                                 Mitad derecha
                             </label>
@@ -130,21 +130,21 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="queso" id="queso3" value="option3">
+                            <input class="form-check-input" type="radio" name="queso" id="queso3" value="izq">
                             <label class="form-check-label" for="gridRadio3">
                                 Parte Izquierda
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="queso" id="queso1" value="option1" checked>
+                            <input class="form-check-input" type="radio" name="queso" id="queso1" value="todo" checked>
                             <label class="form-check-label" for="gridRadio1">
                                 Todo
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="queso" id="queso2" value="option2">
+                            <input class="form-check-input" type="radio" name="queso" id="queso2" value="der">
                             <label class="form-check-label" for="gridRadio2">
                                 Parte Derecha
                             </label>
@@ -164,25 +164,25 @@
                     <div class="col-sm-6">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" value="Jamon"> Jamon
+                                <input type="checkbox" name="check" class="form-check-input" value="Jamon"> Jamon
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" value="Peperoni"> Peperoni
+                                <input type="checkbox" name="check"  class="form-check-input" value="Peperoni"> Peperoni
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" value="Tocino"> Tocino
+                                <input type="checkbox" name="check"  class="form-check-input" value="Tocino"> Tocino
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" value="Carne"> Carne
+                                <input type="checkbox" name="check"  class="form-check-input" value="Carne"> Carne
                             </label>
                         </div>
                         <br>
@@ -191,25 +191,25 @@
                     <div class="col-sm-6">
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" value="Pina"> Piña
+                                <input type="checkbox" name="check"  class="form-check-input" value="Pina"> Piña
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" value="Pimiento"> Pimiento
+                                <input type="checkbox" name="check"  class="form-check-input" value="Pimiento"> Pimiento
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" value="Cheddar"> Queso Cheddar
+                                <input type="checkbox"  name="check"  class="form-check-input" value="Cheddar"> Queso Cheddar
                             </label>
                         </div>
                         <br>
                         <div class="form-check">
                             <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" value="hongos"> Champiñones
+                                <input type="checkbox" name="check"  class="form-check-input" value="hongos"> Champiñones
                             </label>
                         </div>
 
@@ -217,9 +217,9 @@
 
                 </div>
 
-                <div class="btn">
-                    <button type="submit" href="/">Send</button>
-                </div>
+                
+                <button type="submit" class="btn btn-success">Enviar</button>
+                
 </form>
 </div>
 

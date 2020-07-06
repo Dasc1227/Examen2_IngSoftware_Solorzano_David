@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Examen2_Solorzano_David.Controller
 {
-    public class Controller
+    public class PizzaController
     {
         private PizzaModel modelo; 
     }
