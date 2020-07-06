@@ -12,6 +12,20 @@ namespace Examen2_Solorzano_David.Pages
 
     {
         [TempData]
+        public int precioTotal { get; set; }
+        [TempData]
+        public string ingrediente { get; set; }
+        [TempData]
+        public string salsa { get; set; }
+        [TempData]
+        public string masa { get; set; }
+        [TempData]
+        public string tamanio { get; set; }
+        [TempData]
+        public int precioIngredientes { get; set; }
+        [TempData]
+        public string queso { get; set; }
+        [TempData]
         public string Message { get; set; }
 
         [TempData]
@@ -24,21 +38,22 @@ namespace Examen2_Solorzano_David.Pages
         public IActionResult OnPost()
         {
             controller = new PizzaController();
-            string salsa = Request.Form["salsa"].ToString();
-            string masa = Request.Form["masa"].ToString();
-            string queso = Request.Form["queso"].ToString();
-            string tamanio = Request.Form["tamano"].ToString();
-            string ingrediente = Request.Form["check"].ToString();
+            salsa = Request.Form["salsa"].ToString();
+            masa = Request.Form["masa"].ToString();
+            queso = Request.Form["queso"].ToString();
+            tamanio = Request.Form["tamano"].ToString();
+            ingrediente = Request.Form["check"].ToString();
 
-            if (!controller.validarIngredientes(ingrediente))
+            if (ingrediente.Equals(""))
             {
                 Message = "Hacen falta valores";
                 return RedirectToPage("FormularioPedido");
             }
             List<string> ingredientes = ingrediente.Split(",").ToList();
             controller.guardarDatos(salsa, masa, queso, tamanio, ingredientes);
-
-            return RedirectToPage("Facturacion");
+            precioIngredientes = controller.getIngredientesPrecio();
+            precioTotal = 500 + 1000 + 1000 + precioIngredientes;
+            return RedirectToPage("FormularioPedido");
         }
     }
 }

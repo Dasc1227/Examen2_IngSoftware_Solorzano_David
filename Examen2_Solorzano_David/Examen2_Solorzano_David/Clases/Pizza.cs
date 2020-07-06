@@ -19,6 +19,15 @@ namespace Examen2_Solorzano_David.Clases
         {
             
         }
+        public Boolean validarIngredientes(string ingre)
+        {
+            if (ingre.Equals(""))
+            {
+                return false;
+            }
+            return true;
+        }
+
 
         public List<string>getIngredientes()
         {
@@ -28,6 +37,11 @@ namespace Examen2_Solorzano_David.Clases
         public int getPrecioTamano()
         {
             return this.PrecioTamanio;
+        }
+
+        public int getIngredientesPrecio()
+        {
+            return this.ingredientes.Count * 500;
         }
 
         public int getPrecioTotal()
@@ -65,20 +79,21 @@ namespace Examen2_Solorzano_David.Clases
             public Builder agregarSalsa(string sauce)
             {
                 pisa.salsa = sauce;
-
+                pisa.precioTotal += 1000;
                 return this;
             }
 
             public Builder agregarQueso(string quesos)
             {
                 pisa.queso = quesos;
-
+                pisa.precioTotal += 500;
                 return this;
             }
 
             public Builder agregarMasa(string sauce)
             {
                 pisa.masa = sauce;
+                pisa.precioTotal += 500;
 
                 return this;
             }

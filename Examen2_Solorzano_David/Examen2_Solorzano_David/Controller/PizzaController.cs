@@ -1,4 +1,5 @@
-﻿using Examen2_Solorzano_David.Modelos;
+﻿using Examen2_Solorzano_David.Clases;
+using Examen2_Solorzano_David.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,11 +9,11 @@ namespace Examen2_Solorzano_David.Controller
 {
     public class PizzaController
     {
-        private PizzaModel modelo { get; set; }
+        private Pizza modelo { get; set; }
 
         public PizzaController()
         {
-            this.modelo = new PizzaModel();
+            
         }
 
         public Boolean validarIngredientes(string ingre)
@@ -22,7 +23,7 @@ namespace Examen2_Solorzano_David.Controller
 
         public void guardarDatos(string salsa, string masa, string tamanio, string queso, List<string> ingredientes)
         {
-            this.modelo.guardarDatos( salsa,  masa,  tamanio,  queso,  ingredientes);
+            this.modelo  = new Pizza.Builder().agregarSalsa(salsa).agregarMasa(masa).agregarQueso(queso).agregarIngredientes(ingredientes).build();
         }
 
        public string getSalsa()
@@ -41,9 +42,23 @@ namespace Examen2_Solorzano_David.Controller
         public string getTamanio()
         {
             return modelo.getTamanio();
-        } 
+        }
 
+        public string getIngredientes()
+        {
+            return String.Join(", ", modelo.getIngredientes().ToArray());
 
+        }
+
+        public int getIngredientesPrecio()
+        {
+            return modelo.getIngredientesPrecio();
+        }
+
+        public int getPrecioTotal()
+        {
+            return modelo.getPrecioTotal();
+        }
 
     }
 }
