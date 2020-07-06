@@ -7,14 +7,9 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Examen2_Solorzano_David.Pages
 {
-    public class FormularioPedidoModel : PageModel
+    public class FacturacionModel : PageModel
     {
         public void OnGet()
-        {
-
-        }
-
-        public void OnPost()
         {
 
         }
