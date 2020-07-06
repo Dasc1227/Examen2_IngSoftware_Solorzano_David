@@ -1,4 +1,4 @@
-﻿using Examen2_Solorzano_David.Clases;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ namespace Examen2_Solorzano_David.Modelos
 {
     public class PizzaModel
     {
-        private Pizza pizza;
+        
         public Boolean validarIngredientes(string ingre)
         {
             if (ingre.Equals(""))
@@ -17,37 +17,39 @@ namespace Examen2_Solorzano_David.Modelos
             }
             return true;
         }
-
-        public void guardarDatos(string salsa, string masa, string tamanio, string queso, List<string> ingredientes)
+        public int getPrice(string masa,string tamanio, List<string> ingredientes)
         {
-            this.pizza = new Pizza.Builder().agregarSalsa(salsa).agregarMasa(masa).agregarQueso(queso).agregarIngredientes(ingredientes).build();
-        }
-        public string getSalsa()
-        {
-            return pizza.getSalsa();
-        }
-        public string getMasa()
-        {
-            return pizza.getMasa();
-        }
-        public string getQueso()
-        {
-            return pizza.getQueso();
+            int total = 0;
+            total += 1000 + getMasaPrice(masa)+getTamanoPrice(tamanio)+(ingredientes.Count*500);  //Salsa, Queso
+            return total;
         }
 
-        public string getTamanio()
+        public int getMasaPrice(string masa)
         {
-            return pizza.getTamanio();
+            int precio = 0;
+            if (masa.Equals("original"))
+                precio += 1000;
+            if (masa.Equals("crunchy"))
+                precio += 1500;
+            if (masa.Equals("sarten") || masa.Equals("queso"))
+                precio += 2000;
+
+            return precio;
         }
 
-        public int getPreciosTotal()
+        public int getTamanoPrice(string masa)
         {
-            return this.pizza.getPrecioTotal();
+            int precio = 0;
+            if (masa.Equals("peque"))
+                precio += 4000;
+            if (masa.Equals("media"))
+                precio += 4500;
+            if (masa.Equals("grande") )
+                precio += 5000;
+            if (masa.Equals("extra"))
+                precio += 6000;
+            return precio;
         }
 
-        public int getPrecioTamanio()
-        {
-            return this.pizza.getPrecioTamano();
-        }
     }
 }

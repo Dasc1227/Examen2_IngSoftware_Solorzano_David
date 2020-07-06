@@ -9,7 +9,7 @@ namespace Examen2_Solorzano_David.Controller
 {
     public class PizzaController
     {
-        private Pizza modelo { get; set; }
+        private PizzaModel modelo { get; set; }
 
         public PizzaController()
         {
@@ -18,47 +18,16 @@ namespace Examen2_Solorzano_David.Controller
 
         public Boolean validarIngredientes(string ingre)
         {
+            modelo = new PizzaModel();
             return modelo.validarIngredientes(ingre);
         }
 
-        public void guardarDatos(string salsa, string masa, string tamanio, string queso, List<string> ingredientes)
+        public int getPrice(string tamanio, List<string>ingredientes)
         {
-            this.modelo  = new Pizza.Builder().agregarSalsa(salsa).agregarMasa(masa).agregarQueso(queso).agregarIngredientes(ingredientes).build();
+            modelo = new PizzaModel();
+            return modelo.getPrice(salsa, masa, queso, tamanio, ingredientes);
         }
 
-       public string getSalsa()
-        {
-            return modelo.getSalsa();
-        }
-        public string getMasa()
-        {
-            return modelo.getMasa();
-        }
-        public string getQueso()
-        {
-            return modelo.getQueso();
-        }
-
-        public string getTamanio()
-        {
-            return modelo.getTamanio();
-        }
-
-        public string getIngredientes()
-        {
-            return String.Join(", ", modelo.getIngredientes().ToArray());
-
-        }
-
-        public int getIngredientesPrecio()
-        {
-            return modelo.getIngredientesPrecio();
-        }
-
-        public int getPrecioTotal()
-        {
-            return modelo.getPrecioTotal();
-        }
 
     }
 }
