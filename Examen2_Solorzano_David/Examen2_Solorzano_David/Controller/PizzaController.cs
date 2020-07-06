@@ -24,5 +24,26 @@ namespace Examen2_Solorzano_David.Controller
         {
             this.modelo.guardarDatos( salsa,  masa,  tamanio,  queso,  ingredientes);
         }
+
+       public string getSalsa()
+        {
+            return modelo.getSalsa();
+        }
+        public string getMasa()
+        {
+            return modelo.getMasa();
+        }
+        public string getQueso()
+        {
+            return modelo.getQueso();
+        }
+
+        public string getTamanio()
+        {
+            return modelo.getTamanio();
+        } 
+
+
+
     }
 }

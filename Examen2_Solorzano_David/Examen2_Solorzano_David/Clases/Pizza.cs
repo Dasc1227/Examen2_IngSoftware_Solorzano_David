@@ -8,7 +8,7 @@ namespace Examen2_Solorzano_David.Clases
     public class Pizza
     {
         private List<string> ingredientes;
-        private List<int> precios;
+        private int PrecioTamanio;
         private int precioTotal;
         private string salsa;
         private string tamano;
@@ -25,14 +25,32 @@ namespace Examen2_Solorzano_David.Clases
             return this.ingredientes;
         }
 
-        public List<int> getPrecios()
+        public int getPrecioTamano()
         {
-            return this.precios;
+            return this.PrecioTamanio;
         }
 
         public int getPrecioTotal()
         {
             return this.precioTotal;
+        }
+
+        public string getSalsa()
+        {
+            return this.salsa;
+        }
+        public string getMasa()
+        {
+            return this.masa;
+        }
+        public string getQueso()
+        {
+            return this.queso;
+        }
+
+        public string getTamanio()
+        {
+            return this.tamano;
         }
 
         public class Builder
@@ -69,13 +87,26 @@ namespace Examen2_Solorzano_David.Clases
             {
                 pisa.tamano = tamanio;
                 if (tamanio.Equals("peque"))
+                {
                     pisa.precioTotal += 5000;
+                    pisa.PrecioTamanio = 5000; 
+                }
+                    
                 if (tamanio.Equals("media"))
+                {
                     pisa.precioTotal += 5500;
+                    pisa.PrecioTamanio = 5500;
+                }
                 if (tamanio.Equals("grande"))
+                {
                     pisa.precioTotal += 6000;
+                    pisa.PrecioTamanio = 6000;
+                }
                 if (tamanio.Equals("extra"))
+                {
                     pisa.precioTotal += 6500;
+                    pisa.PrecioTamanio = 6500;
+                }
                 return this;
             }
 

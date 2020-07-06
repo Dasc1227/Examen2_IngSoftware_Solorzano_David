@@ -22,5 +22,32 @@ namespace Examen2_Solorzano_David.Modelos
         {
             this.pizza = new Pizza.Builder().agregarSalsa(salsa).agregarMasa(masa).agregarQueso(queso).agregarIngredientes(ingredientes).build();
         }
+        public string getSalsa()
+        {
+            return pizza.getSalsa();
+        }
+        public string getMasa()
+        {
+            return pizza.getMasa();
+        }
+        public string getQueso()
+        {
+            return pizza.getQueso();
+        }
+
+        public string getTamanio()
+        {
+            return pizza.getTamanio();
+        }
+
+        public int getPreciosTotal()
+        {
+            return this.pizza.getPrecioTotal();
+        }
+
+        public int getPrecioTamanio()
+        {
+            return this.pizza.getPrecioTamano();
+        }
     }
 }
