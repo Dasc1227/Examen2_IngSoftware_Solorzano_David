@@ -68,12 +68,21 @@ namespace Examen2_Solorzano_David.Clases
             public Builder agregarTamano(string tamanio)
             {
                 pisa.tamano = tamanio;
+                if (tamanio.Equals("peque"))
+                    pisa.precioTotal += 5000;
+                if (tamanio.Equals("media"))
+                    pisa.precioTotal += 5500;
+                if (tamanio.Equals("grande"))
+                    pisa.precioTotal += 6000;
+                if (tamanio.Equals("extra"))
+                    pisa.precioTotal += 6500;
                 return this;
             }
 
-            public Builder agregarIngredientes(string ingrediente)
+            public Builder agregarIngredientes(List<string> ingrediente)
             {
-                pisa.ingredientes.Add(ingrediente);
+                pisa.ingredientes = ingrediente;
+                pisa.precioTotal += 500*ingrediente.Count;
                 return this;
             }
 
