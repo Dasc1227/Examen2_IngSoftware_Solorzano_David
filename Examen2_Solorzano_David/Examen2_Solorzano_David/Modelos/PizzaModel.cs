@@ -13,7 +13,7 @@ namespace Examen2_Solorzano_David.Modelos
         public int getPrice(string masa,string tamanio, List<string> ingredientes)
         {
             int total = 0;
-            total += 1000 + getMasaPrice(masa)+getTamanoPrice(tamanio)+(ingredientes.Count*500);  
+            total += 1000 + getMasaPrice(masa)+getTamanoPrice(tamanio)+getIngrePrice(ingredientes);  
             return total; //impuesto
         }
 
