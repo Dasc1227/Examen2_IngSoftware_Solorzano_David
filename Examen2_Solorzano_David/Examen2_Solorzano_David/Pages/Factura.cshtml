@@ -32,41 +32,44 @@
             <br>
             <p>Ingredientes: @Model.ingrediente</p>
             <br>
-            <br>
+
             <p>precio Total</p>
             <br>
         </div>
         <div class="col-sm-6">
             <h4>Precio</h4>
             <br>
-            <p> @Model.precioTamano</p>
+            <p> @Model.precioTamano colones</p>
             <br>
-            <p>@Model.precioMasa </p>
+            <p>@Model.precioMasa colones</p>
             <br>
-            <p> 500</p>
+            <p> 500 colones</p>
             <br>
-            <p> 500</p>
+            <p> 500 colones</p>
             <br>
 
-            <p>@Model.precioIngre</p>
+            <p>@Model.precioIngre colones</p>
             <br>
-            <p>@Model.precioTotal</p>
+            <p>@Model.precioTotal colones</p>
             <br>
         </div>
     </div>
     <br>
+    <hr>
+    <h3>Direccion de entrega</h3>
+    <br>
 
+    <p>@Model.direccion</p>
+    <br>
+    <br>
+    <br>
     <div class="row">
         <div class="col-sm-3">
             <div class="btn">
-                <button type="submit" href="/">Confirmar</button>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="btn">
-                <button type="submit" href="/">Descartar</button>
+                <button type="submit" class="btn btn-success">Confirmar</button>
             </div>
         </div>
     </div>
 </form>
+
 
