@@ -1,4 +1,4 @@
-﻿using Examen2_Solorzano_David.Clases;
+﻿
 using Examen2_Solorzano_David.Modelos;
 using System;
 using System.Collections.Generic;
@@ -22,10 +22,28 @@ namespace Examen2_Solorzano_David.Controller
             return modelo.validarIngredientes(ingre);
         }
 
-        public int getPrice(string tamanio, List<string>ingredientes)
+        public int getPrice(string masa, string tamanio, List<string>ingredientes)
         {
             modelo = new PizzaModel();
-            return modelo.getPrice(salsa, masa, queso, tamanio, ingredientes);
+            return modelo.getPrice( masa, tamanio, ingredientes);
+        }
+
+        public int getMasaPrice(string masa)
+        {
+            modelo = new PizzaModel();
+            return modelo.getMasaPrice(masa);
+        }
+
+        public int getTamanoPrice(string tamanio)
+        {
+            modelo = new PizzaModel();
+            return modelo.getTamanoPrice( tamanio);
+        }
+
+        public int getIngrePrice(List<string> ingre)
+        {
+            modelo = new PizzaModel();
+            return modelo.getIngrePrice(ingre);
         }
 
 

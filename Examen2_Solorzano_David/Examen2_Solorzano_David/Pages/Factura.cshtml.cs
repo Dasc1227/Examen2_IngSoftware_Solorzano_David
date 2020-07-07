@@ -9,7 +9,7 @@ namespace Examen2_Solorzano_David.Pages
 {
     public class FacturaModel : PageModel
     {
-        public int precioTotal { get; set; }
+
         [TempData]
         public string ingrediente { get; set; }
         [TempData]
@@ -18,10 +18,17 @@ namespace Examen2_Solorzano_David.Pages
         public string masa { get; set; }
         [TempData]
         public string tamanio { get; set; }
-        [TempData]
-        public int precioIngredientes { get; set; }
+ 
         [TempData]
         public string queso { get; set; }
+        [TempData]
+        public int precioIngre { get; set; }
+        [TempData]
+        public int precioMasa { get; set; }
+        [TempData]
+        public int precioTamano { get; set; }
+        [TempData]
+        public int precioTotal { get; set; }
         public void OnGet()
         {
 

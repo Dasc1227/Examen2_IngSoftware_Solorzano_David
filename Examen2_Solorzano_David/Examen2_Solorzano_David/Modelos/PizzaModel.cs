@@ -20,8 +20,8 @@ namespace Examen2_Solorzano_David.Modelos
         public int getPrice(string masa,string tamanio, List<string> ingredientes)
         {
             int total = 0;
-            total += 1000 + getMasaPrice(masa)+getTamanoPrice(tamanio)+(ingredientes.Count*500);  //Salsa, Queso
-            return total;
+            total += 1000 + getMasaPrice(masa)+getTamanoPrice(tamanio)+(ingredientes.Count*500);  
+            return total; //impuesto
         }
 
         public int getMasaPrice(string masa)
@@ -40,15 +40,19 @@ namespace Examen2_Solorzano_David.Modelos
         public int getTamanoPrice(string masa)
         {
             int precio = 0;
-            if (masa.Equals("peque"))
+            if (masa.Equals("pequena"))
                 precio += 4000;
-            if (masa.Equals("media"))
+            if (masa.Equals("mediana"))
                 precio += 4500;
             if (masa.Equals("grande") )
                 precio += 5000;
             if (masa.Equals("extra"))
                 precio += 6000;
             return precio;
+        }
+        public int getIngrePrice(List<string> ingre)
+        {
+            return (ingre.Count * 500);
         }
 
     }

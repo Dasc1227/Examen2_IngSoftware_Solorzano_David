@@ -11,24 +11,31 @@ namespace Examen2_Solorzano_David.Pages
     public class FormularioPedidoModel : PageModel
 
     {
-        [TempData]
-        public int precioTotal { get; set; }
+
         [TempData]
         public string ingrediente { get; set; }
         [TempData]
         public string salsa { get; set; }
+  
+        [TempData]
+        public int precioMasa { get; set; }
+        [TempData]
+        public int precioTamano { get; set; }
+        [TempData]
+        public int precioIngre { get; set; }
+        [TempData]
+        public int precioTotal { get; set; }
         [TempData]
         public string masa { get; set; }
         [TempData]
         public string tamanio { get; set; }
-        [TempData]
-        public int precioIngredientes { get; set; }
+  
         [TempData]
         public string queso { get; set; }
         [TempData]
         public string Message { get; set; }
 
-        [TempData]
+ 
         PizzaController controller { get; set; }
         public void OnGet()
         {
@@ -43,16 +50,18 @@ namespace Examen2_Solorzano_David.Pages
             queso = Request.Form["queso"].ToString();
             tamanio = Request.Form["tamano"].ToString();
             ingrediente = Request.Form["check"].ToString();
-
+          
             if (ingrediente.Equals(""))
             {
                 Message = "Hacen falta valores";
                 return RedirectToPage("FormularioPedido");
             }
             List<string> ingredientes = ingrediente.Split(",").ToList();
-            controller.guardarDatos(salsa, masa, queso, tamanio, ingredientes);
-            precioIngredientes = controller.getIngredientesPrecio();
-            precioTotal = 500 + 1000 + 1000 + precioIngredientes;
+            precioMasa = controller.getMasaPrice(masa);
+            precioTamano = controller.getTamanoPrice(tamanio);
+            precioTotal = controller.getPrice(masa, tamanio, ingredientes);
+            precioIngre = controller.getIngrePrice(ingredientes);
+    
             return RedirectToPage("Factura");
         }
     }
