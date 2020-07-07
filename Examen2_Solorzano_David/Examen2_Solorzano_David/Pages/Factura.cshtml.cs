@@ -35,6 +35,11 @@ namespace Examen2_Solorzano_David.Pages
 
         }
 
+        public IActionResult OnPost()
+        {
+            return RedirectToPage("OrdenExitosa");
+        }
+
 
     }
 }
