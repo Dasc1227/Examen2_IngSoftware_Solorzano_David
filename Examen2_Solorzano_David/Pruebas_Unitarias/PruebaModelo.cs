@@ -11,7 +11,7 @@ namespace Pruebas_Unitarias
         [TestMethod]
         public void ValidarEntradasVacias()
         {
-            PizzaModel modelo = new PizzaModel();
+            ValidacionModel modelo = new ValidacionModel();
             bool resultado = modelo.validarEntrada("");
             Assert.IsFalse(resultado, "Fallo en el test de Validar entradas vacias");
         }
@@ -19,7 +19,7 @@ namespace Pruebas_Unitarias
         [TestMethod]
         public void ValidarEntradasLlenas()
         {
-            PizzaModel modelo = new PizzaModel();
+            ValidacionModel modelo = new ValidacionModel();
             bool resultado = modelo.validarEntrada("Jamon,Peperoni");
             Assert.IsTrue(resultado, "Fallo en el test de Validar entradas llenas");
         }

@@ -9,14 +9,7 @@ namespace Examen2_Solorzano_David.Modelos
     public class PizzaModel
     {
         
-        public Boolean validarEntrada(string ingre)
-        {
-            if (ingre.Equals(""))
-            {
-                return false;
-            }
-            return true;
-        }
+
         public int getPrice(string masa,string tamanio, List<string> ingredientes)
         {
             int total = 0;

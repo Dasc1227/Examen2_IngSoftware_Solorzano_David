@@ -18,7 +18,7 @@ namespace Examen2_Solorzano_David.Controller
 
         public Boolean validarEntradas(string ingre)
         {
-            modelo = new PizzaModel();
+            ValidacionModel modelo = new ValidacionModel();
             return modelo.validarEntrada(ingre);
         }
 
