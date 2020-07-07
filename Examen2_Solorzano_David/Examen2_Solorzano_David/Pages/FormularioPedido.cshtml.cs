@@ -55,12 +55,12 @@ namespace Examen2_Solorzano_David.Pages
             direccion = Request.Form["direccion"].ToString();
             if (!controller.validarEntradas(ingrediente))
             {
-                Message = "Tiene que escoger al menos un ingrediente";
+                Message = "Por favor escoga al menos un ingrediente";
                 return RedirectToPage("FormularioPedido");
             }
             if (!controller.validarEntradas(direccion))
             {
-                Message = "No agrego direccion";
+                Message = "Por favor llene el campo de Direccion";
                 return RedirectToPage("FormularioPedido");
             }
             List<string> ingredientes = ingrediente.Split(",").ToList();
