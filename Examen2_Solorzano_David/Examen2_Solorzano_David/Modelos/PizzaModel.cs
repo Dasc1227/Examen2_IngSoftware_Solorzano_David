@@ -9,7 +9,7 @@ namespace Examen2_Solorzano_David.Modelos
     public class PizzaModel
     {
         
-        public Boolean validarIngredientes(string ingre)
+        public Boolean validarEntrada(string ingre)
         {
             if (ingre.Equals(""))
             {

@@ -18,7 +18,8 @@ namespace Examen2_Solorzano_David.Pages
         public string masa { get; set; }
         [TempData]
         public string tamanio { get; set; }
- 
+        [TempData]
+        public string direccion { get; set; }
         [TempData]
         public string queso { get; set; }
         [TempData]

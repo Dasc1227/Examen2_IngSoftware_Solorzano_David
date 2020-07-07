@@ -29,7 +29,9 @@ namespace Examen2_Solorzano_David.Pages
         public string masa { get; set; }
         [TempData]
         public string tamanio { get; set; }
-  
+        [TempData]
+        public string direccion { get; set; }
+
         [TempData]
         public string queso { get; set; }
         [TempData]
@@ -50,10 +52,15 @@ namespace Examen2_Solorzano_David.Pages
             queso = Request.Form["queso"].ToString();
             tamanio = Request.Form["tamano"].ToString();
             ingrediente = Request.Form["check"].ToString();
-          
-            if (ingrediente.Equals(""))
+            direccion = Request.Form["direccion"].ToString();
+            if (!controller.validarEntradas(ingrediente))
             {
-                Message = "Hacen falta valores";
+                Message = "Tiene que escoger al menos un ingrediente";
+                return RedirectToPage("FormularioPedido");
+            }
+            if (!controller.validarEntradas(direccion))
+            {
+                Message = "No agrego direccion";
                 return RedirectToPage("FormularioPedido");
             }
             List<string> ingredientes = ingrediente.Split(",").ToList();

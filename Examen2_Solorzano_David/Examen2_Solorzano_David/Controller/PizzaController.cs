@@ -16,11 +16,12 @@ namespace Examen2_Solorzano_David.Controller
             
         }
 
-        public Boolean validarIngredientes(string ingre)
+        public Boolean validarEntradas(string ingre)
         {
             modelo = new PizzaModel();
-            return modelo.validarIngredientes(ingre);
+            return modelo.validarEntrada(ingre);
         }
+
 
         public int getPrice(string masa, string tamanio, List<string>ingredientes)
         {
